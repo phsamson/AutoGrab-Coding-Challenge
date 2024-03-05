@@ -37,7 +37,7 @@ describe('Bank', () => {
     expect(() => bank.join('John Doe', 50)).toThrow('Customer "John Doe" already exists.');
   });
 
-  test.only('Test Case #6 - Check if trying to perform an operation on a non-existing customer displays an error message', () => {
+  test('Test Case #6 - Check if trying to perform an operation on a non-existing customer displays an error message', () => {
     expect(() => bank.deposit('Non-existing Customer', 50)).toThrow(
       'Customer "Non-existing Customer" not found.'
     );
