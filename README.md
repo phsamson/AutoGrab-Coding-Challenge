@@ -9,12 +9,16 @@ This is my output for the **Cooee's Technical Exam - AutoGrab Coding Challenge**
 > [!NOTE]
 > Assuming my project's repository has been cloned to your local and you are using VSCode (which I am currently using)...
 
-**1.** Click the "Terminal" tab on VSCode app and then click "New Terminal".
+*To run all test scripts:*
 
-**2.** Type "npm test" in the terminal and hit "enter" key.
+1. Click the "Terminal" tab on VSCode app and then click "New Terminal".
 
-**Result:**
-- The test results are displayed in the terminal.
+2. Type "npm test" in the terminal and hit "enter" key.
 
-## Design Choice ##
+*...and if you want to run a specific test script:*
 
+1. Open the "bank.test.js" file.
+2. Navigate that test() function for the test case that you only want to test.
+3. Add .only before the parenthesis () or after the test() function.
+4. Click the "Terminal" tab on VSCode app and then click "New Terminal".
+5. Type "npm test" in the terminal and hit "enter" key.
