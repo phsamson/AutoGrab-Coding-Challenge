@@ -9,11 +9,11 @@ describe('Bank', () => {
   });
 
   test('Test Case #1 - Check if a customer is allowed to join the bank with an initial deposit', () => {
-    bank.join('John Doe', 100);
-    expect(bank.checkBalance('John Doe')).toBe(100);
+    bank.join('Charles Harvey', 100);
+    expect(bank.checkBalance('Charles Harvey')).toBe(100);
   });
 
-  test('Test Case#2 - Check if a customer is allowed to deposit money', () => {
+  test('Test Case #2 - Check if a customer is allowed to deposit money', () => {
     bank.join('Jane Doe', 50);
     bank.deposit('Jane Doe', 30);
     expect(bank.checkBalance('Jane Doe')).toBe(80);
@@ -37,7 +37,7 @@ describe('Bank', () => {
     expect(() => bank.join('John Doe', 50)).toThrow('Customer "John Doe" already exists.');
   });
 
-  test('Test Case #6 - Check if trying to perform an operation on a non-existing customer displays an error message', () => {
+  test.only('Test Case #6 - Check if trying to perform an operation on a non-existing customer displays an error message', () => {
     expect(() => bank.deposit('Non-existing Customer', 50)).toThrow(
       'Customer "Non-existing Customer" not found.'
     );
@@ -47,8 +47,9 @@ describe('Bank', () => {
     bank.join('John Doe', 100);
     bank.join('Jane Doe', 50);
     bank.join('Bob Smith', 200);
+    bank.join('Charles Harvey', 500)
 
     const totalBalance = bank.getTotalBalance();
-    expect(totalBalance).toBe(350);
+    expect(totalBalance).toBe(850);
   });
 });
