@@ -1,5 +1,5 @@
 //get the logic from /src/bank
-import Bank from '../src/bank';
+import Bank from '../../src/app/bank';
 
 describe('Bank', () => {
   let bank: Bank;
